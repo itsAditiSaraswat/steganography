@@ -36,4 +36,8 @@ function hideText() {
 
   let b = document.getElementById('download-block');
   b.classList.remove("hidden");
+
+  document.getElementById('source-final-img-block').classList.remove("hidden");
+
+  document.getElementById('decoding-block').classList.remove("hidden");
 }
