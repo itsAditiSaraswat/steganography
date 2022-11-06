@@ -5,10 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./favicon.png">
-    <meta name="description" content="Steganography Implementation of Insertion of Confidential Data on Digital Image Media">
-    <title>Secret Communication in Multimedia Forensics</title>
+    <meta name="description" content="Secret Communication in Multimedia Forensics - Steganography Implementation of Insertion of Confidential Data on Digital Image Media">
+    <title>StegIMG - Secret Communication in Multimedia Forensics</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <style>
+        #logo-1 {
+            animation: anim 3s linear;
+            animation-fill-mode: forwards;
+        }
+        #logo-2 {
+            animation: revAnim 3s linear;
+            animation-fill-mode: forwards;
+        }
+        @keyframes anim {
+            0% {
+                opacity: 0;
+                transform: scale(0.7);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes revAnim {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.7);
+                visibility: hidden;
+            }
+        }
+        #download-block {
+            animation: download 2s infinite linear;
+        }
+        @keyframes download {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+
     <script src="steganography.min.js"></script>
 
 </head>
@@ -16,26 +62,20 @@
     <header class="bg-gray-800 w-full px-4 py-3 flex justify-center border-b-4 border-purple-500">
             
         <div class="max-w-4xl w-full">
-
-            <div class="flex items-center justify-between text-purple-500">
-                <img src="https://img.icons8.com/fluency-systems-filled/500/null/steganographie.png" class="h-12 fill-current bg-purple-500 rounded-lg" alt=""/>
-            </div>
-
-            <div class="my-4">
-                <h1 class="text-2xl text-purple-400 tracking-widest font-bold">SECRET COMMUNICATION IN MULTIMEDIA FORENSICS</h1>
+            <div class="my-16">
+                <h1 class="text-2xl text-purple-400 tracking-widest font-bold flex justify-center">SECRET COMMUNICATION IN MULTIMEDIA FORENSICS</h1>
                 <blockquote class=" italic font-semibold text-purple-100 text-sm py-8">
                     <svg aria-hidden="true" class="w-10 h-10 text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"/></svg>
-                    <p>"Steganography is an art or science of hiding information by embedding it in some other data."</p>
+                    <p>"Leonardo da Vinci did a great job hiding secret stories in the paintings he created. Nowadays, in the time of digital images, he would have hidden this information in the alpha channel of his paintings."</p>
                 </blockquote>
             </div>
 
             <div class="relative mt-4 flex">
-                <!-- <div>
-                    <a href="#!" class="bg-purple-500 text-purple-100 font-bold mt-2 px-4 py-2 rounded-full text-xs uppercase"> Enroll Now</a>
-                </div> -->
-
-                <div class="absolute right-0 bg-gray-200 rounded-full flex justify-center items-center p-5 border-4 border-purple-500 -mt-12">
-                    <img src="https://img.icons8.com/fluency-systems-filled/500/null/steganographie.png" class="w-16 h-16" alt="svgImg"/>
+                <div class="absolute right-0 bg-gray-200 rounded-full flex justify-center items-center p-5 border-4 border-purple-500 -mt-12 absolute">
+                    <div class="relative">
+                        <img id="logo-1" src="https://img.icons8.com/fluency-systems-filled/500/null/steganographie.png" class="w-16 h-16" alt="svgImg"/>
+                        <div id="logo-2" class="w-16 h-16 flex justify-center items-center font-bold text-2xl absolute top-0 text-purple-700">StegIMG</div>
+                    </div>
                 </div>
             </div>
 
